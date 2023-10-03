@@ -57,6 +57,13 @@
         .login-form button:hover {
             background-color: #45a049;
         }
+        .option{
+          display: flex;
+          justify-content: space-evenly;
+        }
+        a:visited{
+          color:red;
+        }
     </style>
 </head>
 <body>
@@ -71,6 +78,10 @@
             <input type="password" id="password" name="password" required>
 
             <button type="submit">Login</button>
+            <div class="option">
+              <label><input type="checkbox" name="remember">Remember me</label>
+            <div id="password"><a href="#">Forgot password</a></div>
+            </div>
         </form>
     </div>
 
