@@ -10,4 +10,4 @@ Hacktoberfest is an annual worldwide event held during the month of October. The
 <br> <br>
 https://github.com/GhadgeGauri/HactoberFest23
 <br>
-Conntribute to above repository also
+Conntribute to the above repository also
