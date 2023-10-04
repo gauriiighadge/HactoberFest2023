@@ -9,9 +9,8 @@ def find_hcf(a, b):
     return find_gcd(a, b)
 
 def main():
-    # Example usage
-    num1 = 48
-    num2 = 18
+    num1 = 56
+    num2 = 98
 
     gcd = find_gcd(num1, num2)
     hcf = find_hcf(num1, num2)
