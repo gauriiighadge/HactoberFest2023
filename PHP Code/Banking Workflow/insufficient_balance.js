@@ -1,0 +1,1 @@
+swal("Error...!", "Insufficient balance!");

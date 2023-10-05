@@ -1,0 +1,1 @@
+swal("Error...!", "Same Username and Email already exist!");

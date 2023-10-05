@@ -1,0 +1,23 @@
+body {
+    background: #CCC;
+}
+
+h3 {
+    color: rgb(18, 3, 131);
+    text-align: center;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+h5 {
+    color: rgb(18, 3, 131);
+    text-align: center;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    margin-top: 5px;
+    font-style: italic;
+}
+
+h5 span {
+    font-weight: bold;
+}
