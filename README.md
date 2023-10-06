@@ -34,14 +34,6 @@ Ready to contribute? Check out our Contribution Guide for information on how to 
 Happy Hacking!
 
 
-
-
-
-
-
-
-
-
 ## First Contributions
 
 Welcome to the First Contributions project, designed to help beginners make their first open-source contribution. If you're new to this process, follow the steps below.
