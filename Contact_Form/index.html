@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <form >
+            <h3>GET IN TOUCH</h3>
+            <input type="text" id="name" placeholder="Your Name" required>
+            <input type="email" id="email" placeholder="Email Id" required>
+            <input type="number" id="phone" placeholder="Mobile No." required>
+            <textarea id="message" rows="4" placeholder="Enter your message"></textarea>
+            <input class="button"  type="button" value="Send" onclick="Send()">
+
+        </form>
+    </div>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+    <script>
+        function Send(){
+
+            var name=document.getElementById("name").value;
+            var email=document.getElementById("email").value;
+            var phone=document.getElementById("phone").value;
+            var message=document.getElementById("message").value;
+
+            var body= "Name: " + name + "<br/> Email: " + email + "<br/> Mobile No: " + phone + "<br/> Message: " + message;
+
+            console.log("call")
+            Email.send({
+                SecureToken: "52087b50-612a-4da5-bd94-e8b92ddb5ada",
+                To : 'luckymaurya9719@gmail.com',
+                From : "luckymaurya9719@gmail.com",
+                Subject : "New Contact Form",
+                Body : body
+            }).then(
+            message => 
+                {
+                    if(message=="OK"){
+                        swal("Successfull!", "Your Data Successfully Received", "success");
+
+                    }
+                    else{
+                        swal("Something Wrong!!", "Your Data is not Successfully Received", "error");
+
+                    }
+                }
+            );
+        }
+    </script>
+</body>
+</html>
