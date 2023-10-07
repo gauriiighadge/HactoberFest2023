@@ -1,96 +1,203 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cabin:wght@500&family=Hind:wght@300;400;500;600&family=Josefin+Sans:ital,wght@0,300;1,300&family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Noto+Sans:wght@600&family=Pacifico&family=Poppins:ital,wght@0,200;0,300;0,400;0,500;1,400;1,600&family=Roboto:ital,wght@0,300;0,400;1,900&family=Sedgwick+Ave+Display&family=Ubuntu:wght@300;400&family=Ysabeau:ital,wght@0,100;0,200;0,300;0,400;1,200&family=Zen+Dots&display=swap');
+
 /* CSS Reset */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 body{
     color: white;
     margin: 0px;
     padding: 0px;
-    background: url(GymLandingPageImage/bg.jpg);
-    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
-    
+    background: url(bg7.jpg);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    min-height: 100vh;
+    min-width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;    
 }
-.left{
-    /* border: 2px solid red; */
-    display: inline-block;
-    position: absolute;
-    left: 75px;
-    top: 20px;
-    font-weight: 100;
+header{
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    background-color: rgba(252, 252, 255, 0.05);
+    border: 1px solid rgba(232, 232, 255, 0.125);
+    position:static;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 40px;
 }
-.mid{
-     /* border: 2px solid green;  */
-     display: block;
-    width: 33%;
-    margin: 20px auto;
-    font-weight: bolder;
-    position: sticky;
-    top: 0px;
+.card {
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    background-color: rgba(74, 74, 79, 0.05);
+    border-radius: 12px;
+    border: 1px solid rgba(166, 166, 167, 0.125);
 }
-.right{
-    position: absolute;
-    right: 34px;
-    top: 20px;
-    /* border: 2px solid yellow; */
-    display: inline-block;
-    
-}
-.navbar{
-    display: inline-block;
-}
-.navbar li{
-    display: inline-block;
-    font-size: 15px;
-    
-}
-.navbar li a{
-    color: white;
-    text-decoration: none;
-    padding: 34px 5px;
-}
-.navbar li a:hover, .navbar li a.active{
-    text-decoration: underline;
-    color: grey;
-}
-.left img{
-    width: 75px;
-    filter: invert(100%);
-}
-.left div{
-    margin: -1px;
-    line-height: -2px;
-    font-size: 16px;
+.center{
     text-align: center;
 }
-.btn{
-    margin: 0px 8px;
+.logo>img{
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+}
+.nav-links{
+    display: flex;
+    margin: auto;
+}
+
+.links{
+    margin: 10px 20px;
+}
+
+.buttons{
+    display: flex;
+}
+
+.nav-links .links>a{
+    font-size: 20px;
+    font-weight: 500;
+    text-decoration: none;
     color: white;
-    background-color: black;
-    padding: 4px 7px;
+    transition-duration: 300ms;
+}
+.links >a:hover{
+    color: #ff6700;
+    text-decoration: underline;
+    text-underline-offset: 5px;
+}
+.btn {
+    width: 100px;
+    font-size: 20px;
+    padding: 5px;
+    margin: 10px 8px;
+    color: white;
+    background-color: transparent;
     border: 2px solid rgb(200, 196, 196);
     border-radius: 5px;
-    font-size: 15px;
     cursor: pointer;
+    transition-duration: 300ms;
 }
 .btn:hover{
-    background-color: rgb(175, 169, 169);
+    color: #ff6700;
 }
 .container{
-    border: 2px solid rgb(235, 235, 235);
+    border: 2px solid #ebebeb;
     margin: 71px 89px;
     padding: 38px 86px;
-    width: 24%;
-    border-radius: 19px;
+    width: 500px;
 }
-.form-group input{
-    text-align: center;
+ input{
+    text-align: left;
     display: block;
-    width: 90%;
-    border-radius: 14px;
-    border: 3px solid black;
-    margin: 2px auto;
-    padding: 10px;
-    font-family: "Trirong", serif;
+    width: 100%;
+    margin: 5px auto;
+    padding: 20px;
+    
+}
+ input:focus{
+    background-color:#ebebeb ;
+    border: none;
 }
 .container button{
     display: block;
     width: 23%;
     margin: auto;
+}
+
+.txt{
+    font-weight: 800;
+    font-family: 'Bebas Neue', sans-serif;
+}
+.large{
+    font-size: 100px;
+    color: #ff6700;
+}
+.main{
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 40px;
+}
+.resp{
+    font-size: 30px;
+
+}
+.display{
+    display: none;
+}
+@media (min-width:443px)
+{
+    .bar{
+        display: none;
+    }
+    .cross{
+        display: none;
+    }
+
+}
+
+@media (max-width:443px)
+{
+
+    .main{
+        flex-direction: column;
+    }
+    .resp{
+        position: absolute;
+        top:3%;
+        right: 2%;
+    }
+    .logo>img{
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        left: 3%;
+        z-index: 100;
+    }
+    header{
+        flex-direction: column;
+        width: 100vw;
+        min-height: 70px;
+    }
+    .nav-links{
+        flex-direction: column;
+        text-align: center; 
+        margin: 60px;   
+        display: none; 
+    }
+
+    .buttons{
+        flex-direction: column;
+        display: none;
+    }
+    .large{
+        font-size:80px;
+    }
+    .container{
+        width: 350px;
+        margin: 71px auto 71px 0px;
+        padding: 38px 0px;
+    }
+    input{
+        text-align: left;
+        display: block;
+        width:300px;
+        
+    }
+    .submit{
+        width: 300px;
+        font-size:20px;
+    }
+    .links{
+        margin: 10px 0px;
+    }
+    .main{
+        margin:20px auto 20px 12px;
+    }
 }

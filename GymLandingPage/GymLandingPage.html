@@ -8,46 +8,52 @@
 </head>
 <link rel="stylesheet" href="GymLandingPage.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Trirong">
-
+<link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
 <body>
     <header class="header">
-        <!-- Left box for logo -->
-        <div class="left">
-          <img src="GymLandingPageImage/gym.jpg" alt="" > 
-          <div>Tuhin Fitness</div> 
-        </div> 
-        <!-- Mid box is for navigation -->
-        <div class="mid">
-            <ul class="navbar">
-                <li><a href="#" class="active">Home</a></li>
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">Fitness Center</a></li>
-                <li><a href="#">Contact Us</a></li>
-            </ul>
-        </div>
-        <!-- Right box is for buttons -->
-        <div class="right">
-                <button class="btn">Call Us</button>
-                <button class="btn">Email Us</button>
-        </div>
+       <div class="logo">
+        <img src="gym.jpg" alt="">
+       </div>
+       <div class="nav-links " id="nav">
+        <div class="links"><a href="">Home</a></div>
+        <div class="links"><a href="">About Us</a></div>
+        <div class="links"><a href="">Fitness Center</a></div>
+        <div class="links"><a href="">Contact Us</a></div>
+       </div>
+       <div class="resp">
+        <i class="ri-menu-line bar" id="bar"onclick="show()"></i>
+        <i class="ri-close-line cross display" id="cross" onclick="collapse()"></i>
+       </div>
+       <div class="buttons " id="nav-btn">
+        <button class="btn">Call Us</button>
+        <button class="btn">Email Us</button>
+       </div>
     </header>
-    <div class="container">
-        <h1>Join the best gym of Kolkata Now!</h1>
-        <form action="noaction.php">
-            <div class="form-group">
-                <input type="text" name="" placeholder="Enter your Name">
-            </div>
-            <div class="form-group">
-                <input type="text" name="" placeholder="Enter your Age">
-            </div>
-            <div class="form-group">
-                <input type="text" name="" placeholder="Enter your Gender">
-            </div>
-            <div class="form-group">
-                <input type="text" name="" placeholder="Enter your Locality">
-            </div>
-            <button class="btn">Submit</button>
-        </form>
+    <div class="main">
+        <div class="txt">
+            <div class="large">Revitalize</div>
+            <div class="large">Transform</div>
+            <div class="large">Thrive</div>
+        </div>
+        <div class="container card">
+            <h1 class="center">Enquire Now!</h1>
+            <form action="noaction.php" >
+                <div class="form-group">
+                    <input type="text" name="" placeholder="Enter your Name" >
+                </div>
+                <div class="form-group">
+                    <input type="text" name="" placeholder="Enter your Age">
+                </div>
+                <div class="form-group">
+                    <input type="text" name="" placeholder="Enter your Gender">
+                </div>
+                <div class="form-group">
+                    <input type="text" name="" placeholder="Enter your Locality">
+                </div>
+                <button class="btn Submit">Submit</button>
+            </form>
+        </div>
     </div>
+<script src="main.js"></script>
 </body>
 </html>
