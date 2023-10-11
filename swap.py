@@ -10,8 +10,7 @@ def swap_numbers(first_number, second_number):
     Returns:
         Tuple[float, float]: A tuple containing the swapped numbers.
     """
-    first_number, second_number = second_number, first_number
-    return first_number, second_number
+    return second_number,first_number
 
 try:
    
