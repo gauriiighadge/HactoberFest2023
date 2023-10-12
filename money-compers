@@ -1,0 +1,66 @@
+#include<iostream>
+using namespace std;
+
+
+main(){
+ float rupiah, euro, yen, dollar, ringgit, pound; int pilih;
+  cout<<"=============================================="<<endl;  
+  cout<<"\tKonversi Mata Uang"<<endl;  
+  cout<<"=============================================="<<endl; 
+  cout<<"1. Rupiah ke Dollar Amerika"<<endl;
+  cout<<"2. Rupiah ke Euro"<<endl;
+  cout<<"3. Rupiah ke Pound Inggris"<<endl;
+  cout<<"4. Rupiah ke Yen Jepang"<<endl;
+  cout<<"5. Rupiah ke Ringgit Malaysia"<<endl;
+  cout<<"=============================================="<<endl;
+  cout<<endl;
+  cout<<"Masukan pilihan Anda  : ";cin>>pilih;
+  cout<<endl;
+  cout<<"=============================================="<<endl;
+  
+  if (pilih==1)
+  {
+    cout<<"\n1. Rupiah ke Dollar Amerika"<<endl;
+    cout<<"----------------------------------------------"<<endl;
+    cout<<"Masukan nilai rupiah  : ";cin>>rupiah;
+    dollar = rupiah*0.00008;
+    cout<<"Nilai Dollar Amerika  : "<<dollar<<endl;
+   }
+  
+  else if(pilih==2)
+  {
+       cout<<"\n2. Rupiah ke Euro"<<endl;
+    cout<<"Masukan nilai rupiah  : ";cin>>rupiah;
+    euro = rupiah*0.00007;
+    cout<<"Nilai Euro   : "<<euro<<endl;
+   }
+   
+   else if(pilih==3)
+  {
+       cout<<"\n3. Rupiah ke Pound Inggris"<<endl;
+    cout<<"Masukan nilai rupiah  : ";cin>>rupiah;
+    pound = rupiah*0.00005;
+    cout<<"Nilai Pound Inggris  : "<<pound<<endl;
+   }
+   
+   else if(pilih==4)
+  {
+       cout<<"\n4. Rupiah ke Yen Jepang"<<endl;
+    cout<<"Masukan nilai rupiah  : ";cin>>rupiah;
+    yen = rupiah*0.00876;
+    cout<<"Nilai Yen   : "<<yen<<endl;
+   }
+  
+  else if(pilih==5)
+   {
+    cout<<"\n5. Rupiah ke Ringgit Malaysia"<<endl;
+    cout<<"Masukan nilai rupiah  : ";cin>>rupiah;
+    ringgit = rupiah*0.00032;
+    cout<<"Nilai Ringgit   : "<<ringgit<<endl;}
+    else {cout<<"\nPilihan Tidak Tersedia";
+    cout<<endl;
+   }
+   cout<<endl;
+   cout<<"=============================================="<<endl;
+   cout<<endl;
+}
