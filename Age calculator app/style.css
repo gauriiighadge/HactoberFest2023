@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:ital,wght@0,700;1,400;1,800&display=swap');
+*{
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+}
+html{
+    font-size:62.5%;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root{
+    --primary-color-purple:hsl(259, 100%, 65%);
+    --primary-color-lightred:hsl(0, 100%, 67%);
+    --outer-bg-white: hsl(0, 0%, 100%);
+    --Off-white: hsl(0, 0%, 94%);
+    --body-bg-lightGrey: hsl(0, 0%, 86%);
+    --label-smokeyGrey: hsl(0, 1%, 44%);
+    --offBlack: hsl(0, 0%, 8%);
+    --fontweight-md: 400; 
+    --fontweight-bold:700;
+    --fontweight-bolder: 800;
+}
+body{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:var(--body-bg-lightGrey);
+}
+.outer{
+    min-height:500px;
+    max-width:700px;
+    width:90%;
+    background:var(--outer-bg-white);
+    padding:3em;
+    border-radius: 34px 34px 170px;
+}
+.form{
+    display:flex;
+    gap:20px;
+}
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+.form input{
+   max-width: 118px;
+   width: 105%;
+    height: 60px;
+    border-radius:5px;
+    border:1px solid var(--body-bg-lightGrey);
+    outline:none;
+    padding:0 0.5em;
+    font-size:3rem;
+    color:var(--offBlack);
+    font-weight:var(--fontweight-bold);
+}
+.form div::after{
+    content:attr(add-content);
+    display:block;
+    margin:0.5em 0;
+    color:var(--primary-color-lightred);
+    font-style:italic;
+    font-size:1.5rem;
+}
+
+.form label{
+    display:block;
+    margin:0.5em 0;
+    font-size:1.5rem;
+    color:var(--label-smokeyGrey);
+    letter-spacing:3px;
+    text-transform:uppercase;
+}
+.line{
+    display:inline-block;
+    width:80%;
+    height:1px;
+    background:black;
+    margin:1em 0;
+}
+.middle{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+}
+button[type="submit"]{
+    width:90px;
+    height:90px;
+    border-radius:50%;
+    outline:none;
+    border:none;
+    background-image: url("./assets/images/icon-arrow.svg");
+    background-color:var(--primary-color-purple);
+    background-repeat:no-repeat;
+    background-position: center;
+   cursor:pointer;
+   transition:all 0.3s ease-in-out;
+}
+button[type="submit"]:hover{
+    background-color:var(--offBlack);
+}
+.edits div{
+    font-size:5rem;
+}
+.edits div h1{
+    color:var(--offBlack);
+    font-weight:var(--fontweight-bolder);
+    font-size:5.5rem;
+}
+.edits div h1 span{
+    color:var(--primary-color-purple);
+}
+
+/*  for small screens  */
+@media(max-width:500px){
+    html{
+        font-size:50%;
+    }
+    .outer{
+        border-radius:10px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    }
+    .middle{
+        margin:15px 0;
+    }
+    .form input{
+        font-size:2rem;
+    }
+}
