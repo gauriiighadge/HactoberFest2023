@@ -51,4 +51,17 @@ submitButton.addEventListener("click", () => {
     alert("Incorrect");
     triggerFunction();
   }
+  // In script.js
+
+document.getElementById("submit-button").addEventListener("click", function() {
+  const userAnswer = document.getElementById("user-input").value;
+  if (userAnswer === "8") {
+    // Correct answer, you can proceed with your desired action
+    alert("CAPTCHA solved correctly!");
+  } else {
+    // Incorrect answer, you can handle this as needed (e.g., display an error message)
+    alert("Incorrect answer. Please try again.");
+  }
+});
+
 });
