@@ -1,69 +1,73 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign Up Page</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
-    
-        
-    <link rel="stylesheet" type="text/css" href="style.css">  
+   <title>Loan calculator-KalyanMishra (TutorialsPoint)</title>
+   <style>
+      .Loan_calcualtor{
+         width: 400px;
+         height: 550px;
+         background-color: black;
+         position: absolute;
+         left: 50%;
+         top: 50%;
+         transform: translateX(-50%) translateY(-50%);
+         padding: 20px 0px 0px 100px;
+         border-radius: 10px;
+         color: white;
+      }
+      p{
+         color: white;
+         font-size: 25px;
+         font-family: sans-serif;
+      }
+      h1{
+         color: royalblue;
+      }
+      input{
+         height: 33px;
+         width: 70%;
+         background-color: black;
+         font-size: 20px;
+         color: white;
+         padding: 7px;
+      }
+      #calculate_op{
+         color: white;
+         font-size: 20px;
+         width: 100px;
+         align-content: center;
+         margin-left:100px;
+         cursor: pointer;
+      }
+   </style>
 </head>
 <body>
-    
-    <div class="container">
-
-        <form action="" class="form" id="form">
-            <div class="form-control">
-                <label>First Name</label>
-                <input type="text"  id="username" placeholder="Enter First Name" autocomplete="off" required>
-            </div>
-
-            <div class="form-control">
-                <label>Last Name</label>
-                <input type="text" id="lastname" placeholder="Enter Last Name" autocomplete="off" required >
-                
-            </div>
-
-            <div class="form-control">
-                <label>Email</label>
-                <input type="text"  id="email" placeholder="example@gmail.com" autocomplete="off" required>
-                
-            </div>
-
-            <div class="form-control">
-                <label>Password</label>
-                <input type="password"  id="password" placeholder="Enter Your Password" autocomplete="off">
-                <i class="fas fa-check-circle"></i>
-                <i class="fas fa-exclamation-circle"></i>
-                <small>Error Message</small>
-            </div>
-
-            <div class="form-control">
-                <label>Confirm Password</label>
-                <input type="password"  id="cpassword" placeholder="Confirm Password" autocomplete="off">
-                <i class="fas fa-check-circle"></i>
-                <i class="fas fa-exclamation-circle"></i>
-                <small>Error Message</small>
-            </div>
-            
-            <button class="button signup__submit">
-                <span class="button__text">Sign Up</span>
-            </button><br>
-            <div class="social-media">
-                <a href=""><i class="fa-brands fa-square-instagram"></i></a>
-                <a href=""><i class="fa-brands fa-linkedin"></i></a>
-                <a href=""><i class="fa-brands fa-twitter"></i></a>
-                <a href=""><i class="fa-brands fa-github"></i></a>
-                
-            </div>
-        </form>
-    </div>
-
-
-    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-    
-    <script src="script.js"></script>
+   <div class="Loan_calcualtor">
+      <h1>Loan Calculator </h1>
+      <p>Loan amount: $
+         <input type="number" id="amount" placeholder="Enter amount..">
+      </p>
+      <p>Rate (Interest): %
+         <input step=".1" id="rate" placeholder="Enter rate..">
+      </p>
+      <p>Months (Time):
+         <input type="number" id="time" placeholder="Enter time..">
+      </p>
+         <input type="button" value="Calculate" id="calculate_op" onclick="calculate()">
+      <p>Total EMI: $
+         <span style="font-weight: 20px; color: white;" id="output"></span>
+      </p>
+   </div>
+   <script>
+      function calculate(){
+         amount=document.getElementById('amount').value
+         rate=document.getElementById('rate').value
+         time=document.getElementById('time').value
+         const interest = (amount * (rate * 0.01)) / time;
+         let emi = ((amount / time) + interest).toFixed(2);
+         emi = emi.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+         document.getElementById("output").innerHTML=emi
+      }
+   </script>
 </body>
 </html>
