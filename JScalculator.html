@@ -8,139 +8,161 @@
     <title>Calculator</title>
 
     <style>
+        /* CSS code begins here */
+        /* Importing the 'Poppins' font from Google Fonts */
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
 
+        /* Resetting default styles and setting the font for the entire page */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
 
+        /* Styling the body of the page with background and centering the content */
+        body {
+            padding-top: 200px;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: rgb(2, 2, 2);
+        }
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+        /* Styling for the calculator container */
+        .Calculator {
+            border: 1px solid rgb(96, 93, 93);
+            padding: 10px;
+            border-radius: 20px;
+            background: transparent;
+            box-shadow: 0px 3px 15px, rgba(113, 110, 110, 0.7);
+        }
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing: border-box;
-    font-family:'Poppins', sans-serif;
+        /* Styling for the input field */
+        input {
+            width: 320px;
+            border: none;
+            padding: 20px;
+            margin: 10px;
+            background: transparent;
+            box-shadow: 0px 3px 15px rgbs;
+            font-size: 40px;
+            text-align: right;
+            cursor: pointer;
+            color: white;
+        }
 
-}
-body{
-    padding-top: 200px;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background:rgb(2, 2, 2);
-}
-.Calculator{
-    border:1px solid rgb(96, 93, 93);
-    padding: 10px;
-    border-radius: 20px;
-    background: transparent;
-    box-shadow: 0px 3px 15px, rgba(113, 110, 110,0.7);
-}
-input{
-    width:320px;
-    border:none;
-    padding:20px;
-    margin:10px;
-    background: transparent;
-    box-shadow:0px 3px 15px rgbs;
-    font-size: 40px;
-    text-align: right;
-    cursor:pointer;
-    color:white;
-}
-input::placeholder{
-    color: white;
-}
-button{
-    border:none;
-    width:60px;
-    cursor:pointer;
-    margin:10px;
-    height:60px;
-    text-align: center;
-    border-radius: 50%;
-    color:white;
-    background:transparent;
-    box-shadow: -8px -8px 15px rgba(255,255,255,0.2);
-    font-size:20px;
-}
-.equal{
-    background-color: coral;
-}
-.operator{
-    background-color: rgb(103, 184, 184);
-}
+        /* Styling for input field's placeholder text */
+        input::placeholder {
+            color: white;
+        }
 
+        /* Styling for calculator buttons */
+        button {
+            border: none;
+            width: 60px;
+            cursor: pointer;
+            margin: 10px;
+            height: 60px;
+            text-align: center;
+            border-radius: 50%;
+            color: white;
+            background: transparent;
+            box-shadow: -8px -8px 15px rgba(255, 255, 255, 0.2);
+            font-size: 20px;
+        }
+
+        /* Styling for the equal button */
+        .equal {
+            background-color: coral;
+        }
+
+        /* Styling for operator buttons (+, -, *, /) */
+        .operator {
+            background-color: rgb(103, 184, 184);
+        }
+
+        /* CSS code ends here */
     </style>
 </head>
 <body>
     <div class="Calculator">
         <input type="text" placeholder="0" id="inputBox">
         <div>
-            <button class="operator">AC</button>
-            <button class="operator">DEL</button>
-            <button class="operator">%</button>
-            <button class="operator">/</button>
+            <button class="operator">AC</button> <!-- Clear All -->
+            <button class="operator">DEL</button> <!-- Delete the last character -->
+            <button class="operator">%</button> <!-- Percentage -->
+            <button class="operator">/</button> <!-- Division -->
         </div>
         <div>
             <button>7</button>
             <button>8</button>
             <button>9</button>
-            <button class="operator">*</button>
+            <button class="operator">*</button> <!-- Multiplication -->
         </div>
         <div>
             <button>4</button>
             <button>5</button>
             <button>6</button>
-            <button class="operator">-</button>
+            <button class="operator">-</button> <!-- Subtraction -->
         </div>
         <div>
             <button>1</button>
             <button>2</button>
             <button>3</button>
-            <button class="operator">+</button>
+            <button class="operator">+</button> <!-- Addition -->
         </div>
         <div>
             <button>00</button>
             <button>0</button>
             <button>.</button>
-            <button class="equal">=</button>
+            <button class="equal">=</button> <!-- Equal/Calculate -->
         </div>
-
     </div>
     <script>
-        
- 
+        /* JavaScript code begins here */
 
-let input = document.getElementById('inputBox');
-let buttons = document.querySelectorAll('button');
+        // Get the input element by its ID
+        let input = document.getElementById('inputBox');
 
-let string = "";
-let arr = Array.from(buttons);
-arr.forEach(button => {
-    button.addEventListener('click', (e) =>{
-        if(e.target.innerHTML == '='){
-            string = eval(string);
-            input.value = string;
-        }
+        // Get all the buttons on the page
+        let buttons = document.querySelectorAll('button');
 
-        else if(e.target.innerHTML == 'AC'){
-            string = "";
-            input.value = string;
-        }
-        else if(e.target.innerHTML == 'DEL'){
-            string = string.substring(0, string.length-1);
-            input.value = string;
-        }
-        else{
-            string += e.target.innerHTML;
-            input.value = string;
-        }
-        
-    })
-})
+        // Initialize a string to store the input
+        let string = "";
 
+        // Convert the buttons NodeList to an array
+        let arr = Array.from(buttons);
+
+        // Add click event listeners to all buttons
+        arr.forEach(button => {
+            button.addEventListener('click', (e) => {
+                // If the "=" button is clicked, calculate and display the result
+                if (e.target.innerHTML == '=') {
+                    string = eval(string);
+                    input.value = string;
+                } 
+                // If the "AC" button is clicked, clear the input
+                else if (e.target.innerHTML == 'AC') {
+                    string = "";
+                    input.value = string;
+                } 
+                // If the "DEL" button is clicked, delete the last character
+                else if (e.target.innerHTML == 'DEL') {
+                    string = string.substring(0, string.length - 1);
+                    input.value = string;
+                } 
+                // Otherwise, append the clicked button's value to the input string
+                else {
+                    string += e.target.innerHTML;
+                    input.value = string;
+                }
+            });
+        });
+
+        /* JavaScript code ends here */
     </script>
 </body>
-
 </html>
