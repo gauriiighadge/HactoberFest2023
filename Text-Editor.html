@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Editor</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .editor {
+            margin: 20px;
+            border: 1px solid #ccc;
+            padding: 10px;
+        }
+
+        .toolbar {
+            margin-bottom: 10px;
+        }
+
+        button {
+            padding: 5px 10px;
+            margin-right: 5px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .editor-content {
+            border: 1px solid #ccc;
+            padding: 10px;
+            min-height: 200px;
+            max-height: 400px;
+            overflow-y: auto;
+            white-space: pre-wrap;
+        }
+    </style>
+</head>
+<body>
+    <div class="editor">
+        <div class="toolbar">
+            <button id="bold-button"><b>B</b></button>
+            <button id="italic-button"><i>I</i></button>
+            <button id="underline-button"><u>U</u></button>
+            <button id="uppercase-button">UPPERCASE</button>
+        </div>
+        <div class="editor-content" contenteditable="true" id="editor"></div>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const editor = document.getElementById("editor");
+            const boldButton = document.getElementById("bold-button");
+            const italicButton = document.getElementById("italic-button");
+            const underlineButton = document.getElementById("underline-button");
+            const uppercaseButton = document.getElementById("uppercase-button");
+
+            boldButton.addEventListener("click", () => {
+                document.execCommand("bold", false, null);
+            });
+
+            italicButton.addEventListener("click", () => {
+                document.execCommand("italic", false, null);
+            });
+
+            underlineButton.addEventListener("click", () => {
+                document.execCommand("underline", false, null);
+            });
+
+            uppercaseButton.addEventListener("click", () => {
+                const selection = window.getSelection();
+                const range = selection.getRangeAt(0);
+                const selectedText = range.toString();
+                const modifiedText = selectedText.toUpperCase();
+                document.execCommand("insertText", false, modifiedText);
+            });
+
+            editor.addEventListener("input", () => {
+                // This is just a simple example; you can save the text to a file or database here.
+                // For more advanced features, consider using a rich text editor library or working with real data storage.
+            });
+        });
+    </script>
+</body>
+</html>
