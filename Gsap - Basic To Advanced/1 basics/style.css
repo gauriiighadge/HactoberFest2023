@@ -1,0 +1,25 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: serif;
+}
+
+html , body {
+    height: 100%;
+    width: 100%;
+}
+
+#page1 
+{
+    height: 100%;
+    width: 100%;
+    background-color: lightblue;
+}
+
+#box
+{
+    height: 300px;
+    width: 300px;
+    background-color: crimson;
+}
