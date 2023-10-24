@@ -1,0 +1,34 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: serif;
+}
+
+html , body {
+    height: 100%;
+    width: 100%;
+    /* background-color: black; */
+}
+
+#page1{
+    height: 100vh;
+    width: 100vh;
+    background-color: black;
+}
+
+#page1 h1{
+    font-size: 20vw;
+    color : white;
+}
+#page2{
+    height: 100vh;
+    width: 100vh;
+    background-color: black;
+}
+#page3{
+    height: 100vh;
+    width: 100vh;
+    background-color: black;
+}
+
