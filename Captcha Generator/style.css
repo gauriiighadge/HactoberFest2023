@@ -56,6 +56,14 @@
     color: #ffffff;
     box-shadow: 0 .5em 1em rgba(0, 0, 0, 0.55);
 
+    &:hover {
+        background-color: #005F7E;
+        color: #ffffff;
+        box-shadow: 0 .7em 1.2em rgba(0, 0, 0, 0.7);
+      }
+
+
+
     @media (max-width: 500px) {
       font-size: 16px;
       width: 2.6em;
@@ -70,15 +78,24 @@
     border-radius: 0.4em;
     box-shadow: 0 .5em 1em rgba(0, 0, 0, 0.45);
   }
-  button#submit-button {
-    width: 100%;
-    background-color: #02b6a1;
-    color: #ffffff;
-    font-size: 1.5em;
-    border: none;
-    margin-top: 1em;
-    padding: 0.8em 0;
-    border-radius: 0.4em;
-    font-family: sans-serif;
-    box-shadow: 0 .5em 1em rgba(0, 0, 0, 0.55);
-  }
+ 
+
+     button#submit-button {
+       width: 100%;
+       background-color: #02b6a1;
+       color: #ffffff;
+       font-size: 1.5em;
+       border: none;
+       margin-top: 1em;
+       padding: 0.8em 0;
+       border-radius: 0.4em;
+       font-family: sans-serif;
+       box-shadow: 0 .5em 1em rgba(0, 0, 0, 0.55);
+       transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+  
+       &:hover {
+         background-color: #005F7E;
+         color: #ffffff;
+         box-shadow: 0 .7em 1.2em rgba(0, 0, 0, 0.7);
+       }
+     }
