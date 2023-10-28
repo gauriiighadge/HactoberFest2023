@@ -1,0 +1,50 @@
+import random
+
+# List of words for the game
+word_list = ["apple", "banana", "cherry", "date", "fig", "grape", "kiwi", "lemon", "mango", "orange"]
+
+# Function to choose a random word from the word list
+def choose_word():
+    return random.choice(word_list)
+
+# Function to play Hangman
+def play_hangman():
+    word_to_guess = choose_word()
+    word_length = len(word_to_guess)
+    guessed_word = ["_"] * word_length
+    attempts = 6  # Number of attempts before game over
+
+    print("Welcome to Hangman!")
+    print(" ".join(guessed_word))
+
+    while attempts > 0:
+        guess = input("Guess a letter: ").lower()
+
+        if len(guess) != 1 or not guess.isalpha():
+            print("Please enter a single letter.")
+            continue
+
+        if guess in word_to_guess:
+            for i in range(word_length):
+                if word_to_guess[i] == guess:
+                    guessed_word[i] = guess
+            print(" ".join(guessed_word))
+        else:
+            attempts -= 1
+            print(f"Wrong guess! {attempts} attempts remaining.")
+
+        if "_" not in guessed_word:
+            print("Congratulations! You've guessed the word.")
+            break
+
+    if "_" in guessed_word:
+        print(f"Sorry, you're out of attempts. The word was '{word_to_guess}'.")
+
+# Main game loop
+if __name__ == "__main__":
+    while True:
+        play_hangman()
+        play_again = input("Play again? (yes/no): ").lower()
+        if play_again != "yes":
+            print("Thanks for playing Hangman!")
+            break
