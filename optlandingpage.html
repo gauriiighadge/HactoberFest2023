@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OTP Landing Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f1f1f1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            background: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            outline: none;
+        }
+
+        button {
+            background: #3498db;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Enter OTP</h1>
+        <input type="text" id="otp" placeholder="Enter OTP">
+        <button onclick="checkOTP()">Submit</button>
+    </div>
+
+    <script>
+        function checkOTP() {
+            const otpInput = document.getElementById('otp');
+            const enteredOTP = otpInput.value;
+
+            // Replace '1234' with your actual OTP
+            const actualOTP = '1234';
+
+            if (enteredOTP === actualOTP) {
+                alert('OTP is correct. Redirecting...');
+                // You can redirect the user to another page here
+            } else {
+                alert('Invalid OTP. Please try again.');
+                otpInput.value = ''; // Clear the input field
+            }
+        }
+    </script>
+</body>
+</html>
