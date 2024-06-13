@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        /* Your existing CSS styles go here */
+    </style>
+</head>
+<body>
+    <div class="Calculator">
+        <input type="text" placeholder="0" id="inputBox" readonly>
+        <div>
+            <button class="operator" data-action="clear">AC</button>
+            <button class="operator" data-action="delete">DEL</button>
+            <button class="operator" data-action="%">%</button>
+            <button class="operator" data-action="/">/</button>
+        </div>
+        <div>
+            <button>7</button>
+            <button>8</button>
+            <button>9</button>
+            <button class="operator">*</button>
+        </div>
+        <div>
+            <button>4</button>
+            <button>5</button>
+            <button>6</button>
+            <button class="operator">-</button>
+        </div>
+        <div>
+            <button>1</button>
+            <button>2</button>
+            <button>3</button>
+            <button class="operator">+</button>
+        </div>
+        <div>
+            <button>00</button>
+            <button>0</button>
+            <button>.</button>
+            <button class="equal" data-action="=">=</button>
+        </div>
+    </div>
+    <script>
+        // Your modified JavaScript code goes here
+    </script>
+</body>
+</html>
